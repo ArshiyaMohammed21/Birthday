@@ -1,0 +1,21 @@
+{
+  "name": "birthday-website",
+  "version": "1.0.0",
+  "description": "A website to share birthday wishes and celebrate special moments.",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "birthday",
+    "wishes",
+    "celebration",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

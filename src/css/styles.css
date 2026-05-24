@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f6ff; /* soft light blue */
+    color: #08304b; /* dark blue text for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0077cc; /* primary blue */
+}
+
+.intro {
+    text-align: center;
+    color: #04507a;
+    max-width: 800px;
+    margin: 8px auto 14px;
+    font-size: 1.05rem;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.25s;
+}
+
+.button:hover {
+    background-color: #005fa3;
+}
+
+.wish-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.wish {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* New styles for navigation and wish cards */
+#nav-button,
+.button,
+.nav {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 8px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.controls button {
+    margin: 0 6px;
+}
+
+.wish-card {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #e6f6ff 100%);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border: 1px solid rgba(3,48,75,0.06);
+}
+
+.wish-message {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.wish-author {
+    text-align: right;
+    color: #666;
+    margin-top: 6px;
+}
+
+.wish-counter {
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.error { color: #b00020; text-align:center; }
+
+/* Cards grid and flip styles */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    padding: 16px;
+}
+
+.flip-card {
+    background: transparent;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 6px 12px rgba(3,48,75,0.06);
+}
+
+.flip-card-front {
+    background: linear-gradient(180deg, #ffffff 0%, #e6f6ff 100%);
+    color: #04507a;
+}
+
+.flip-card-back {
+    background: linear-gradient(180deg, #dff4ff 0%, #ffffff 100%);
+    color: #033a5a;
+    transform: rotateY(180deg);
+}
+
+.card-short { font-weight: 600; }
+.card-hint { font-size: 0.8rem; color: #6aaed9; margin-top: 6px; }
+.card-full { font-size: 1rem; line-height: 1.4; }
+
+.emoji { font-size: 3rem; }
+.flip-card-front { display:flex; align-items:center; justify-content:center; }
+
+/* Tiny labeled buttons */
+.tiny-buttons { text-align: center; margin: 12px 0; display:flex; gap:8px; flex-wrap:wrap; justify-content:center }
+.tiny-btn {
+    background: #cceefa;
+    border: 1px solid #b6e0f6;
+    color: #023e5c;
+    padding: 6px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.tiny-btn:hover { background:#b6eaf8 }
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .flip-card-inner { height: 140px; }
+}
